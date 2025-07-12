@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento De PetShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+<body>
+    <img src="./src/assets/icons/App Name.svg" alt="logo do site" id="logo">
+    <div class="container">
+
+     <div class="header">
+        <div class="head-content">
+            <div class="head-text">
+                <h1>Sua Agenda</h1>
+                <h3>Aqui você pode ver todos os clientes e serviços agendados para hoje.</h3>
+            </div>
+            <div class="input-date">
+                <span><img src="./src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt=""></span>
+                <input type="date" name="date" value="date" id="date">
+            </div>
+        </div>
+    </div>
+
+     <main>
+        <section class="schedule-period">
+            <header>
+                <img src="./src/assets/icons/Sun-Fog--Streamline-Solar.svg" alt="Manhã" />
+                <strong>Manhã</strong>
+                <span>09h-12h</span>
+            </header>
+            <ul id="period-morning" class="period">
+                <li>
+                    <div class="clients">
+                        <strong>09:00</strong>
+                        <span class="pet-name">Thor</span>
+                        <span class="client-name">/ Fernanda Costa</span>
+                    </div>
+                    <div class="service">
+                        <span>Vacinação</span>
+                    </div>
+                    <div class="action">
+                        <span>Remover agendamento</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+     </main>
+    </div>
+</body>
+</html>

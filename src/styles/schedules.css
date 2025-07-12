@@ -1,0 +1,111 @@
+/* header {
+  padding-top: 0.75rem;
+  padding-bottom: 2rem;
+} */
+
+.head-text > h1 {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 32px;
+  color: #F5F4F5;
+  margin-bottom: 0.25rem;
+}
+
+.head-text > h3{
+ color: var(--content-secondary);
+ font-weight: medium;
+ font-size: 0.875rem;
+ line-height: 24px;
+ padding-bottom: 0.75rem;
+}
+
+input[type="date"] {
+  background-color: var(--background-primary);
+  color: var(--content-secondary);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid var(--border-primary);
+}
+
+
+.schedule-period header {
+  display: flex;
+  background-color: var(--background-tertiary);
+  justify-content: start;
+  gap: 8px;
+  
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--border-primary);
+  padding: 1rem;
+}
+
+.schedule-period{
+  margin-top: 2rem;
+  background-color: var(--background-tertiary);
+
+  border-radius: 10px;
+}
+
+.schedule-period header strong {
+  color: var(--content-primary);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.schedule-period header span {
+  color: var(--content-secondary);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.period {
+  list-style: none;
+}
+
+.period li {
+  margin-left: .5rem;
+
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.clients strong {
+  color: var(--content-primary);
+  font-size: 0.875rem;
+  line-height: 24px;
+  margin-right: 1rem;
+}
+
+.clients {
+  margin-bottom: 4px;
+}
+
+.pet-name {
+  color: var(--content-primary);
+  font-weight: bold;
+}
+
+.client-name {
+  color: var(--content-secondary);
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+
+.service {
+  color: var(--content-secondary);
+  margin-bottom: 8px;
+}
+
+.action span {
+  color: var(--content-tertiary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: end;
+}
+
+.action span:hover {
+  text-decoration: underline;
+}
