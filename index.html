@@ -26,8 +26,8 @@
                 <h3>Aqui você pode ver todos os clientes e serviços agendados para hoje.</h3>
             </div>
             <div class="input-date">
-                <span><img src="./src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt=""></span>
-                <input type="date" name="date" value="date" id="date">
+                <input type="date" name="date" value="date" id="date" class="date-input">
+                <span><img src="./src/assets/icons/arrow-input.svg" alt=""></span>
             </div>
         </div>
     </div>
@@ -55,7 +55,88 @@
                 </li>
             </ul>
         </section>
+
+        <section class="schedule-period">
+            <header>
+                <img src="./src/assets/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="Tarde" />
+                <strong>Tarde</strong>
+                <span>13h-18h</span>
+            </header>
+            <ul id="period-afternoon" class="period">
+                <li>
+                    <div class="clients">
+                        <strong>13:00</strong>
+                        <span class="pet-name">Mel</span>
+                        <span class="client-name">/ João Souza</span>
+                    </div>
+                    <div class="service">
+                        <span>Corte de Unhas</span>
+                    </div>
+                    <div class="action">
+                        <span>Remover agendamento</span>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="period-afternoon" class="period">
+                <li>
+                    <div class="clients">
+                        <strong>14:00</strong>
+                        <span class="pet-name">Bella</span>
+                        <span class="client-name">/ Pedro Martins</span>
+                    </div>
+                    <div class="service">
+                            <span>Aplicação de Anti-pulgas</span>
+                    </div>
+                    <div class="action">
+                        <span>Remover agendamento</span>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="period-afternoon" class="period">
+                <li>
+                    <div class="clients">
+                        <strong>15:00</strong>
+                        <span class="pet-name">Simba</span>
+                        <span class="client-name">/ Juliana Rocha</span>
+                    </div>
+                    <div class="service">
+                        <span>Tosa Higiênica</span>
+                    </div>
+                    <div class="action">
+                        <span>Remover agendamento</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="schedule-period">
+            <header>
+                <img src="./src/assets/icons/Moon-Stars--Streamline-Solar.svg" alt="Manhã" />
+                <strong>Noite</strong>
+                <span>19h-21h</span>
+            </header>
+            <ul id="period-night" class="period">
+                <li>
+                    <div class="clients">
+                        <strong>20:00</strong>
+                        <span class="pet-name">Max</span>
+                        <span class="client-name">/ Camila Santos</span>
+                    </div>
+                    <div class="service">
+                        <span>Limpeza de Dentes</span>
+                    </div>
+                    <div class="action">
+                        <span>Remover agendamento</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
      </main>
+    </div>
+    <div class="btn-schedule">
+        <button type="button" id="btn-schedules">NOVO AGENDAMENTO</button>
     </div>
 </body>
 </html>

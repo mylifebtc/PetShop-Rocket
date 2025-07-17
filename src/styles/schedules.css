@@ -3,6 +3,10 @@
   padding-bottom: 2rem;
 } */
 
+#logo{
+  padding-bottom: 0.75rem;
+}
+
 .head-text > h1 {
   font-family: "Inter Tight", sans-serif;
   font-size: 1.5rem;
@@ -19,31 +23,60 @@
  line-height: 24px;
  padding-bottom: 0.75rem;
 }
+.date-input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 
 input[type="date"] {
   background-color: var(--background-primary);
   color: var(--content-secondary);
   padding: 0.75rem;
-  border-radius: 8px;
+  border-radius: 9px;
   border: 2px solid var(--border-primary);
+ 
+  border: none;
+  font-size: 1rem;
+  background-image: url('../assets/icons/Calendar-Minimalistic--Streamline-Solar.svg'); 
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 2rem; 
 }
 
+.input-date span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input-date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+}
 
 .schedule-period header {
   display: flex;
   background-color: var(--background-tertiary);
   justify-content: start;
   gap: 8px;
-  
-  margin-bottom: 10px;
-  border-bottom: 2px solid var(--border-primary);
+  border-radius: 9px;
+  /* border-bottom: 2px solid var(--border-primary); */
   padding: 1rem;
 }
 
 .schedule-period{
   margin-top: 2rem;
-  background-color: var(--background-tertiary);
-
+  background-color: var(--background-tertiary);y: ;
   border-radius: 10px;
 }
 
@@ -51,22 +84,28 @@ input[type="date"] {
   color: var(--content-primary);
   font-size: 1rem;
   font-weight: bold;
+  font-family: "Inter Tight", sans-serif;
+
 }
 
 .schedule-period header span {
   color: var(--content-secondary);
   font-size: 1rem;
   font-weight: bold;
+  margin-left: auto;
 }
 
 
 .period {
+  padding: 1rem;
   list-style: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--border-primary);
 }
 
 .period li {
   margin-left: .5rem;
-
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -98,14 +137,59 @@ input[type="date"] {
   color: var(--content-secondary);
   margin-bottom: 8px;
 }
-
+.action{
+  margin-left: auto;
+}
 .action span {
   color: var(--content-tertiary);
   cursor: pointer;
   font-size: 0.9rem;
-  text-align: end;
 }
 
 .action span:hover {
   text-decoration: underline;
+}
+.btn-schedule{
+  background-color: var(--background-tertiary);
+  text-align: center;
+  margin-top: 4rem;
+  padding-block: 1rem;
+  width: 100%;
+}
+#btn-schedules {
+  background-color: var(--background-brand);
+  padding: 1rem;
+  border: none;
+  border-radius: .35rem;
+  color: #050405;
+}
+
+@media (width >= 79em) {
+  .head-content{
+    display: flex;
+  }
+
+  .input-date{
+    margin-left: auto;
+  }
+
+  .container{
+    padding: 5rem;
+    padding-top: 0;
+    margin-inline: 15rem;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .btn-schedule{
+    padding-top: 0;
+    text-align: end;
+    justify-content: end;
+    background-color: var(--background-primary);
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
+  }
+
+
 }
