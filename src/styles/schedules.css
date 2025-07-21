@@ -23,45 +23,53 @@
  line-height: 24px;
  padding-bottom: 0.75rem;
 }
-.date-input{
+/* .date-input{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+} */
 
 
 input[type="date"] {
   background-color: var(--background-primary);
   color: var(--content-secondary);
-  padding: 0.75rem;
   border-radius: 9px;
-  border: 2px solid var(--border-primary);
- 
-  border: none;
+  border: 1px solid var(--border-primary);
   font-size: 1rem;
-  background-image: url('../assets/icons/Calendar-Minimalistic--Streamline-Solar.svg'); 
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  padding-left: 2rem; 
+}
+.input-date i {
+ margin-left: 0.5rem;
+ /* align-content: center; */
+ position: absolute;
+ top: 25%;
 }
 
-.input-date span {
+.input-date input {
+  /* flex: 1; */
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--border-primary);
+  /* max-width: 40%; */
+  padding-left: 2.5rem;
+}
+/* .input-date span {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-}
+} */
 
 .input-date {
+  display: flex;
+  height: 3rem;
   position: relative;
-  display: inline-flex;
-  align-items: center;
+  align-content: center;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  -webkit-appearance: none;
-  display: none;
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url(../assets/icons/arrow-input.svg) no-repeat;
 }
 
 .schedule-period header {
@@ -76,7 +84,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .schedule-period{
   margin-top: 2rem;
-  background-color: var(--background-tertiary);y: ;
+  background-color: var(--background-tertiary);
   border-radius: 10px;
 }
 
@@ -148,6 +156,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .action span:hover {
   text-decoration: underline;
+  color: var(--content-primary);
 }
 .btn-schedule{
   background-color: var(--background-tertiary);
@@ -167,6 +176,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (width >= 79em) {
   .head-content{
     display: flex;
+    align-items: center;
   }
 
   .input-date{
@@ -191,5 +201,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 0;
   }
 
+  .input-date input {
+    max-width: 100%;
+  }
 
+  .input-date i {
+    justify-content: center;
+    align-content: center;
+  }
 }
