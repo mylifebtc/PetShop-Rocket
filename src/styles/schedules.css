@@ -36,15 +36,20 @@ input[type="date"] {
   border-radius: 9px;
   border: 1px solid var(--border-primary);
   font-size: 1rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
-.input-date i {
+.input-date i,
+.input-date-schedules i {
  margin-left: 0.5rem;
  /* align-content: center; */
  position: absolute;
  top: 25%;
 }
 
-.input-date input {
+.input-date input,
+.input-date-schedules input {
   /* flex: 1; */
   background-color: transparent;
   outline: none;
@@ -60,7 +65,8 @@ input[type="date"] {
   cursor: pointer;
 } */
 
-.input-date {
+.input-date,
+.input-date-schedules {
   display: flex;
   height: 3rem;
   position: relative;
@@ -171,6 +177,9 @@ input[type="date"] {
   border: none;
   border-radius: .35rem;
   color: #050405;
+}
+#btn-schedules:hover{
+  background-color: var(--background-highlights);
 }
 
 @media (width >= 79em) {

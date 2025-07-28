@@ -141,5 +141,61 @@
     <div class="btn-schedule">
         <button type="button" id="btn-schedules">NOVO AGENDAMENTO</button>
     </div>
+
+    <div id="myFormModal" class="modal">
+        <div class="modal-content">
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+            <form>
+                <div class="input-text">
+                    <label for="name">Nome do Tutor</label>
+                    <i>
+                        <img src="./src/assets/icons/User--Streamline-Solar.svg" alt="">
+                    </i>
+                    <input type="text" id="name" name="name" placeholder="Helena Souza">
+                </div>
+                <div class="input-text">
+                    <label for="pet-name">Nome do pet</label>
+                    <i>
+                        <img src="./src/assets/icons/Pet-Paw--Streamline-Core.svg" alt="">
+                    </i>
+                    <input type="text" id="pet-name" name="pet-name" placeholder="Cheddar">
+                </div>
+                <div class="input-num">
+                    <label for="phone">Telefone</label>
+                    <i>
+                        <img src="./src/assets/icons/phone-streamline.svg" alt="">
+                    </i>
+                    <input type="number" id="phone" name="phone" min="10" max="11" placeholder="(00) 0 0000-0000">
+                </div>
+                <div class="input-area">
+                    <label for="service">Descriçao do serviço</label>
+                    <textarea name="service" id="service" placeholder="Banho e tosa"></textarea>
+                </div>
+    
+                <div class="input-wrapper">
+                    <div class="input-date-schedules">
+                        <label for="date-schedules">Data</label>
+                        <i>
+                            <img src="./src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+                        </i>
+                        <input type="date" name="date-schedules" id="date-schedules">
+                    </div>
+                    <div class="input-hour-shedules">
+                        <label for="hour">Hora</label>
+                        <i>
+                            <img src="./src/assets/icons/Clock-Circle.svg" alt="">
+                        </i>
+                        <input type="time" name="time">
+                    </div>
+                </div>
+                <div class="btn-submit">
+                    <button type="submit">Agendar</button>
+                </div>
+            </form>
+        </div>
+       </div>
+       <script type="module" src="./dist/main.js"></script>
+
 </body>
 </html>
