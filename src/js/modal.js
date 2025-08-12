@@ -8,5 +8,3 @@ export const myBtnSchedules = function(){
 }
 
 myBtnSchedules();
-
-console.log("Olá mundo")

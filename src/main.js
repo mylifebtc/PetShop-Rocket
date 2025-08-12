@@ -1,7 +1,7 @@
 "use strict"
 
 // Configuração dayjs
-// import "./libs/dayjs.js";
+import "./libs/dayjs.js";
 
 // CSS
 import "./styles/global.css";
@@ -10,6 +10,7 @@ import "./styles/modal.css";
 
 // JS
 import './js/modal.js';
-
+import './js/form/submit.js'
+import './js/page-load.js'
 
 import dayjs from "dayjs";

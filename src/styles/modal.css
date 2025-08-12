@@ -55,7 +55,8 @@ label{
 input[type="text"],
 input[type="number"],
 input[type="time"],
-#date-schedules {
+#date-schedules,
+select {
   padding: 0.75rem;
   background-color: var(--background-tertiary);
   border: 1px solid var(--border-primary);
@@ -69,10 +70,16 @@ textarea{
  color: var(--content-primary);
 }
 
-input[type="time"]{
+input[type="time"],
+select{
   color: var(--content-secondary);
 }
-
+select{
+  padding-left: 2rem;
+  display: flex;
+  outline: none;
+  
+}
 .btn-submit{
   text-align: end;
 }
@@ -106,14 +113,16 @@ form{
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="time"]:focus,
-textarea:focus{
+textarea:focus,
+select:focus{
  border: 1px solid var(--border-brand);
 }
 
 input[type="text"]:hover,
 input[type="number"]:hover,
 input[type="time"]:hover,
-textarea:hover{
+textarea:hover,
+select:hover {
  border: 1px solid var(--border-secondary);
 }
 
@@ -170,7 +179,8 @@ textarea:hover{
 
 
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+select {
  font-size: 1rem;
  color: var(--content-secondary);
 }
