@@ -65,8 +65,8 @@
                 <strong>Tarde</strong>
                 <span>13h-18h</span>
             </header>
-            <ul id="period-afternoon" class="period">
-                <li>
+            <!-- <ul id="period-afternoon" class="period">
+                 <li>
                     <div class="clients">
                         <strong>13:00</strong>
                         <span class="pet-name">Mel</span>
@@ -79,10 +79,10 @@
                         <span>Remover agendamento</span>
                     </div>
                 </li>
-            </ul>
+            </ul> --> 
 
             <ul id="period-afternoon" class="period">
-                <li>
+                <!-- <li>
                     <div class="clients">
                         <strong>14:00</strong>
                         <span class="pet-name">Bella</span>
@@ -94,12 +94,12 @@
                     <div class="action">
                         <span>Remover agendamento</span>
                     </div>
-                </li>
+                </li> -->
             </ul>
 
-            <ul id="period-afternoon" class="period">
-                <li>
-                    <div class="clients">
+           <!-- <ul id="period-afternoon" class="period">
+                 <li>
+                     <div class="clients">
                         <strong>15:00</strong>
                         <span class="pet-name">Simba</span>
                         <span class="client-name">/ Juliana Rocha</span>
@@ -110,8 +110,8 @@
                     <div class="action">
                         <span>Remover agendamento</span>
                     </div>
-                </li>
-            </ul>
+                </li> 
+            </ul> -->
         </section>
 
         <section class="schedule-period">
@@ -166,7 +166,7 @@
                     <i>
                         <img src="./src/assets/icons/phone-streamline.svg" alt="">
                     </i>
-                    <input type="number" id="phone" name="phone" placeholder="(00) 0 0000-0000">
+                    <input type="text" id="phone" name="phone" placeholder="(21) 99283-9281" maxlength="15">
                 </div>
                 <div class="input-area">
                     <label for="service">Descriçao do serviço</label>
@@ -186,7 +186,22 @@
                         <i>
                             <img src="./src/assets/icons/Clock-Circle.svg" alt="">
                         </i>
-                        <input type="time" name="time" id="time-schedules" min="08:00" max="21:00">
+                        <!-- <input type="time" name="time" id="time-schedules" min="08:00" max="21:00"> -->
+                        <select id="hour" name="hour">
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 AM</option>
+                            <option value="13:00">13:00 PM</option>
+                            <option value="14:00">14:00 PM</option>
+                            <option value="15:00">15:00 PM</option>
+                            <option value="16:00">16:00 PM</option>
+                            <option value="17:00">17:00 PM</option>
+                            <option value="18:00">18:00 PM</option>
+                            <option value="19:00">19:00 PM</option>
+                            <option value="20:00">20:00 PM</option>
+                            <option value="21:00">21:00 PM</option>
+                          </select>
                     </div>
                 </div>
                 <div class="btn-submit">

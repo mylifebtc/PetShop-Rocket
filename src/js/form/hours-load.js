@@ -1,26 +1,46 @@
 import dayjs from "dayjs"
 
-import { openingHours } from "../../utils/opening-hours.js"
+// Horários disponíveis do petshop
+const availableHours = [
+  "09:00", "10:00", "11:00", "12:00",
+  "13:00", "14:00", "15:00", "16:00", "17:00", "18:00",
+  "19:00", "20:00", "21:00"
+]
 
-
-
-export function hoursload({ date }){
-  const opening = openingHours.map((hour) => {
-    // Recupera somente a hora.
-    const [scheduleHour] = hour.split(":")
-
-    // Adiciona a hora na date e verifica se ta no passado.
-    const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
-
-    // Retorna a hora mostrando se está ou nao disponivel.
-    return ({
-      hour,
-      available: isHourPast,
+// Mostra apenas horários disponíveis no select
+export function loadAvailableHours(selectedDate, bookedSchedules = []) {
+  const hourSelect = document.getElementById("hour")
+  const today = dayjs()
+  const selectedDateTime = dayjs(selectedDate)
+  
+  hourSelect.innerHTML = ''
+  
+  availableHours.forEach(hour => {
+    const [hourStr] = hour.split(":")
+    const scheduleTime = selectedDateTime.hour(Number(hourStr)).minute(0)
+    
+    // Verificar se já passou (só para hoje) ou se já está agendado
+    const isPast = selectedDateTime.isSame(today, 'day') && scheduleTime.isBefore(today)
+    const isBooked = bookedSchedules.some(schedule => {
+      const scheduleDateTime = dayjs(schedule.when)
+      return scheduleDateTime.isSame(scheduleTime, 'hour')
     })
-
-
-    // console.log(scheduleHour, isHourPast)
+    
+    if (!isPast && !isBooked) {
+      const option = document.createElement('option')
+      option.value = hour
+      option.textContent = `${hourStr}:00 ${Number(hourStr) < 12 ? 'AM' : 'PM'}`
+      hourSelect.appendChild(option)
+    }
   })
+  
+  if (hourSelect.children.length === 0) {
+    const option = document.createElement('option')
+    option.value = ""
+    option.textContent = "Nenhum horário disponível"
+    option.disabled = true
+    hourSelect.appendChild(option)
+  }
 }
 
 

@@ -12,5 +12,6 @@ import "./styles/modal.css";
 import './js/modal.js';
 import './js/form/submit.js'
 import './js/page-load.js'
+import './js/schedules/show.js'
 
 import dayjs from "dayjs";
