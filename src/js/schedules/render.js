@@ -1,6 +1,7 @@
 import dayjs from "dayjs"
 
 export function renderSchedulesByPeriod(schedules) {
+  // Separar agendamentos por período do dia
   const morning = schedules.filter(s => {
     const hour = dayjs(s.when).hour()
     return hour >= 9 && hour <= 12
@@ -16,6 +17,7 @@ export function renderSchedulesByPeriod(schedules) {
     return hour >= 19 && hour <= 21
   })
 
+  // Mostrar cada período na tela
   showPeriod('period-morning', morning)
   showPeriod('period-afternoon', afternoon)
   showPeriod('period-night', night)
@@ -25,13 +27,16 @@ function showPeriod(periodId, schedules) {
   const container = document.getElementById(periodId)
   if (!container) return
 
+  // Limpar lista anterior
   container.innerHTML = ''
 
+  // Se não há agendamentos, mostrar mensagem
   if (schedules.length === 0) {
     container.innerHTML = '<li class="empty-schedule">Nenhum agendamento</li>'
     return
   }
 
+  // Criar item para cada agendamento
   schedules.forEach(schedule => {
     const time = dayjs(schedule.when).format('HH:mm')
     const item = document.createElement('li')
@@ -46,7 +51,7 @@ function showPeriod(periodId, schedules) {
         <span>${schedule.service}</span>
       </div>
       <div class="action">
-        <span onclick="removeSchedule(${schedule.id}, event)">Remover agendamento</span>
+        <span onclick="removeSchedule('${schedule.id}', event)">Remover agendamento</span>
       </div>
     `
     
@@ -54,29 +59,38 @@ function showPeriod(periodId, schedules) {
   })
 }
 
+// Função para remover agendamento (simples e direta)
 window.removeSchedule = function(id, event) {
+  // Perguntar se quer mesmo remover
   if (!confirm('Remover este agendamento?')) return
   
-  // Remover da tela primeiro (resposta imediata)
+  // Converter ID para string (evita problemas)
+  const stringId = String(id)
+  
+  // 1. Remover da tela imediatamente
   const item = event.target.closest('li')
   if (item) {
     item.remove()
   }
   
-  // Tentar remover da API (sem bloquear a interface)
-  fetch(`http://localhost:3333/schedules/${id}`, {
+  // 2. Remover da API
+  fetch(`http://localhost:3333/schedules/${stringId}`, {
     method: 'DELETE'
   })
   .then(response => {
     if (response.ok) {
+      // Sucesso: mostrar mensagem e recarregar
       alert('Agendamento removido com sucesso!')
+      location.reload()
     } else {
-      // Se não conseguiu remover da API, pelo menos sumiu da tela
-      alert('Agendamento removido da tela. Recarregue a página para sincronizar.')
+      // Erro: mostrar erro e recarregar
+      alert('Erro ao remover. Recarregando página...')
+      location.reload()
     }
   })
   .catch(error => {
-    // Se deu erro na API, pelo menos sumiu da tela
-    alert('Agendamento removido da tela. Recarregue a página para sincronizar.')
+    // Erro de conexão: mostrar erro e recarregar
+    alert('Erro de conexão. Recarregando página...')
+    location.reload()
   })
 } 

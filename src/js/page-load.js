@@ -1,9 +1,11 @@
 import { schedulesDay } from "./schedules/load.js"
 
-// Inicializar página
+// Função para inicializar a página
 function initializePage() {
+  // Carregar agendamentos do dia atual
   schedulesDay()
   
+  // Pegar input de data da página principal
   const dateInput = document.getElementById("date")
   if (dateInput) {
     // Abrir calendário ao clicar no input
@@ -18,4 +20,5 @@ function initializePage() {
   }
 }
 
+// Quando a página carregar, inicializar
 document.addEventListener("DOMContentLoaded", initializePage)

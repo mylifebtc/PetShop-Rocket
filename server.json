@@ -1,14 +1,6 @@
 {
   "schedules": [
     {
-      "id": "1755614539532",
-      "name": "MyLife",
-      "petName": "Franc",
-      "phone": "(23) 13213-1232",
-      "service": "Banho e Corte",
-      "when": "2025-08-19T03:00:00.000Z"
-    },
-    {
       "id": "1755614577484",
       "name": "MyLife",
       "petName": "joaso",
@@ -39,14 +31,6 @@
       "phone": "(23) 13213-1232",
       "service": "Banho",
       "when": "2025-08-19T03:00:00.000Z"
-    },
-    {
-      "id": 1755884461111,
-      "name": "Marcelo",
-      "petName": "Zen",
-      "phone": "(62) 99291-8218",
-      "service": "banho e cortar a unha",
-      "when": "2025-08-23T16:00:00-03:00"
     }
   ]
 }
