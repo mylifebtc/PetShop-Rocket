@@ -1,6 +1,6 @@
 import { schedulesDay } from "./schedules/load.js"
 
-// Função para inicializar a página
+// Inicializar a página
 function initializePage() {
   // Carregar agendamentos do dia atual
   schedulesDay()

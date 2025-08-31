@@ -84,7 +84,7 @@ window.removeSchedule = function(id, event) {
       location.reload()
     } else {
       // Erro: mostrar erro e recarregar
-      alert('Erro ao remover. Recarregando página...')
+      alert('Erro ao remover agendamento...')
       location.reload()
     }
   })
